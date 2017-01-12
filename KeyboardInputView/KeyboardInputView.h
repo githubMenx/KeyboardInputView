@@ -24,6 +24,4 @@
 
 - (void)showInViewController:(UIViewController *)viewController;
 
-- (void)hideInViewController:(UIViewController *)viewController;
-
 @end

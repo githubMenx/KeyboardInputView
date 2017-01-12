@@ -32,8 +32,7 @@
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([KeyboardInputView class]) owner:nil options:nil] firstObject];
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
+- (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
@@ -48,11 +47,13 @@
 - (void)showInViewController:(UIViewController *)viewController {
     // 添加蒙版
     [CoverView showInViewController:viewController];
-    // 添加到view上
+    // 添加self
     [viewController.navigationController.view addSubview:self];
     // 成为第一响应者
     [self.textField becomeFirstResponder];
 }
+
+#pragma mark - 内部方法
 
 - (void)hideInViewController:(UIViewController *)viewController {
     // 隐藏蒙版
@@ -65,9 +66,7 @@
 
 - (IBAction)confirmAction {
     if (self.delegate && [self.delegate respondsToSelector:@selector(keyboardInputViewDidClickConfirm:text:)]) {
-        // 隐藏
         [self hideInViewController:(UIViewController *)self.delegate];
-        // 回调delegate的keyboardInputViewDidClickConfirm:text:
         [self.delegate keyboardInputViewDidClickConfirm:self text:self.textField.text];
     }
 }
@@ -82,9 +81,9 @@
 
 - (void)keyboardWillShow:(NSNotification *)noti {
     NSDictionary *userInfo = noti.userInfo;
+    CGRect keyboardFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     [UIView animateWithDuration:duration animations:^{
-        CGRect keyboardFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGRect myFrame = self.frame;
         myFrame.origin.y = keyboardFrame.origin.y - myFrame.size.height;
         self.frame = myFrame;
