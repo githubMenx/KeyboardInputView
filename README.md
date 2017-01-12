@@ -4,4 +4,5 @@
 ```
 [self.keyboardInputView showInViewController:self];
 ```
-![](/Users/meng/Desktop/keyboardInputView.png) 
+![](/Users/meng/Desktop/keyboardInputView0.png)
+![](/Users/meng/Desktop/keyboardInputView1.png) 
