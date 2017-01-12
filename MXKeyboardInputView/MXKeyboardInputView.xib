@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MXKeyboardInputView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-6S-Iac">
+                    <rect key="frame" x="20" y="25" width="200" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7A-bG-s5i">
+                    <rect key="frame" x="240" y="25" width="60" height="30"/>
+                    <color key="backgroundColor" red="0.1137254902" green="0.72549019609999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="xIO-a6-hWu"/>
+                    </constraints>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmAction" destination="iN0-l3-epB" eventType="touchUpInside" id="zEn-06-Awb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wh3-6S-Iac" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="I6s-ff-eZ4"/>
+                <constraint firstItem="L7A-bG-s5i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="J5h-ju-Yu9"/>
+                <constraint firstAttribute="trailing" secondItem="L7A-bG-s5i" secondAttribute="trailing" constant="20" id="UQp-bg-fwu"/>
+                <constraint firstItem="L7A-bG-s5i" firstAttribute="leading" secondItem="wh3-6S-Iac" secondAttribute="trailing" constant="20" id="W8B-6r-BO9"/>
+                <constraint firstItem="wh3-6S-Iac" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="f6e-Ap-8kF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textField" destination="wh3-6S-Iac" id="wXt-5R-SEK"/>
+            </connections>
+            <point key="canvasLocation" x="12" y="-8"/>
+        </view>
+    </objects>
+</document>
