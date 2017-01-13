@@ -93,12 +93,12 @@
 		BB6046471E2785E90058A6A0 /* MXKeyboardInputView */ = {
 			isa = PBXGroup;
 			children = (
-				BB6046481E2785E90058A6A0 /* MXCoverView.h */,
-				BB6046491E2785E90058A6A0 /* MXCoverView.m */,
-				BB60464A1E2785E90058A6A0 /* MXCoverView.xib */,
 				BB60464B1E2785E90058A6A0 /* MXKeyboardInputView.h */,
 				BB60464C1E2785E90058A6A0 /* MXKeyboardInputView.m */,
 				BB60464D1E2785E90058A6A0 /* MXKeyboardInputView.xib */,
+				BB6046481E2785E90058A6A0 /* MXCoverView.h */,
+				BB6046491E2785E90058A6A0 /* MXCoverView.m */,
+				BB60464A1E2785E90058A6A0 /* MXCoverView.xib */,
 			);
 			name = MXKeyboardInputView;
 			path = ../../MXKeyboardInputView;
@@ -135,6 +135,7 @@
 				TargetAttributes = {
 					BB60462C1E2785D00058A6A0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X9224SUUV9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -301,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9224SUUV9;
 				INFOPLIST_FILE = MXKeyboardInputViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -313,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9224SUUV9;
 				INFOPLIST_FILE = MXKeyboardInputViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -340,6 +343,7 @@
 				BB6046461E2785D00058A6A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

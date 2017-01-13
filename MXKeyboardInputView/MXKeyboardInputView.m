@@ -64,14 +64,23 @@
     [MXCoverView hideInViewController:viewController];
     // 失去第一响应者
     [self.textField resignFirstResponder];
+    // 移除
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self removeFromSuperview];
+    });
 }
 
 #pragma mark - click
 
 - (IBAction)confirmAction {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(keyboardInputViewDidClickConfirm:text:)]) {
-        [self hideInViewController:(UIViewController *)self.delegate];
-        [self.delegate keyboardInputViewDidClickConfirm:self text:self.textField.text];
+    if (self.textField.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"请输入内容" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
+        [alert show];
+    }else{
+        if (self.delegate && [self.delegate respondsToSelector:@selector(keyboardInputViewDidClickConfirm:text:)]) {
+            [self hideInViewController:(UIViewController *)self.delegate];
+            [self.delegate keyboardInputViewDidClickConfirm:self text:self.textField.text];
+        }
     }
 }
 
@@ -92,7 +101,6 @@
         myFrame.origin.y = keyboardFrame.origin.y - myFrame.size.height;
         self.frame = myFrame;
     }];
-    
 }
 
 - (void)keyboardWillHide:(NSNotification *)noti {
@@ -102,10 +110,7 @@
         CGRect myFrame = self.frame;
         myFrame.origin.y = [UIScreen mainScreen].bounds.size.height;
         self.frame = myFrame;
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
     }];
-    
 }
 
 #pragma mark - dealloc
