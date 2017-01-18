@@ -135,8 +135,7 @@
 				TargetAttributes = {
 					BB60462C1E2785D00058A6A0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X9224SUUV9;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -302,7 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X9224SUUV9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MXKeyboardInputViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -315,7 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X9224SUUV9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MXKeyboardInputViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
